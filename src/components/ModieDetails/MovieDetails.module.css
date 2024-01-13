@@ -1,0 +1,33 @@
+.detailsContainer {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.detailsImg {
+    grid-row: 1/7;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.detailsTitle {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.detailsVote {
+
+}
+.detailsOverview {
+
+}
+.detailsOverViewText {
+
+}
+.detailsGenres {
+
+}
+.detailsGenresText {
+
+}
