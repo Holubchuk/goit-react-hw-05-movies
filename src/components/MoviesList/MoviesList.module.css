@@ -1,18 +1,13 @@
-.trendingTitle {
-    font-size: 48px;
-    margin-left: 100px;
-    font-weight: 700;
-}
 .trendingItem {
-    list-style-type: none;
-    margin-left: 50px;  
-    font-size: 36px; 
+  list-style-type: none;
+  margin-left: 50px;
+  font-size: 36px;
 }
 .trendingLink {
-    font-size: 24px;
-    text-decoration: none;
-    color: black;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
 }
 .trendingLink:hover {
-    color: aqua;
+  color: aqua;
 }

@@ -1,18 +1,26 @@
+header {
+  display: flex;
+  background-color: #333;
+  padding: 10px;
+}
+
 .navLink {
-    display: inline-flex;
-    padding: 20px;
-    min-width: 100px;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    background-color: transparent;
-    font-weight: 500;
-    border-radius: 7px;
-    color: inherit;
-    text-decoration: none;
-    transition: all .3s;
-  }
-  .active {
-    background-color: black;
-    color: white;
-  }
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.navLink.active {
+  color: #007bff;
+}
+
+.navLink:hover {
+  color: #007bff;
+}
+
+main {
+  padding: 20px;
+}

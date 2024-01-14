@@ -30,7 +30,7 @@ export const Reviews = () => {
   return (
     <div className={css.reviewsContainer}>
       {status === STATUSES.pending && <Loader />}
-      {Array.isArray(moviesReviews) && 
+      {Array.isArray(moviesReviews) && moviesReviews.length > 0 ? (
         moviesReviews.map(movie => (
           <ul key={movie.id} className={css.reviewsList}>
             <li className={css.reviewsItem}>
@@ -38,7 +38,10 @@ export const Reviews = () => {
               <p className={css.reviewsContent}>{movie.content}</p>
             </li>
           </ul>
-        ))}
+        ))
+      ) : (
+        <p className={css.noReviewsMessage}>No reviews available for this movie</p>
+      )}
     </div>
   );
 };
