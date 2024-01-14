@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 import { Loader } from '../components/Loader/Loader';
 import { STATUSES } from '../services/constants';
@@ -12,24 +13,28 @@ import { requestMovieByQuery } from 'services/api';
 
 const MoviesPage = () => {
   const [searchMovies, setsearchMovies] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [status, setStatus] = useState(STATUSES.idle);
   const [searchValue, setSearchValue] = useState('');
 
+  const query = searchParams.get('query');
+
   useEffect(() => {
-    const fetchTrendingMovies = async (searchValue) => {
+    if (query === null ) return;
+
+    const fetchMovieByQuery = async (searchValue) => {
       try {
         setStatus(STATUSES.pending);
         const responseData = await requestMovieByQuery(searchValue);
         setsearchMovies(responseData);
-        console.log(responseData);
         setStatus(STATUSES.success);
       } catch (error) {
         setStatus(STATUSES.error);
       }
     };
-    if (searchValue === '' ) return;
-    fetchTrendingMovies(searchValue);
-  }, [searchValue]);
+
+    fetchMovieByQuery(searchValue);
+  }, [searchValue, query]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -38,6 +43,9 @@ const MoviesPage = () => {
 
     setSearchValue(searchValue);
     setsearchMovies([]);
+    setSearchParams({
+      query: searchValue,
+    });
     e.target.reset();
   };
 
@@ -45,7 +53,7 @@ const MoviesPage = () => {
     <div>
       <Searchbar handleSubmit={handleSubmit} />
       {status === STATUSES.pending && <Loader />}
-      {status === STATUSES.success && <MoviesList trending={searchMovies} searchMovies={searchMovies} />}
+      {status === STATUSES.success && <MoviesList trending={searchMovies} />}
     </div>
   )
 }
