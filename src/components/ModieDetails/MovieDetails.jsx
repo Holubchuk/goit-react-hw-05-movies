@@ -1,24 +1,24 @@
 import React from 'react';
 import css from './MovieDetails.module.css';
+import { Link, Routes, Route } from 'react-router-dom';
+
+import { Cast } from '../Cast/Cast';
+import { Reviews } from '../Reviews/Reviews';
+import { MovieDetailsItem } from 'components/MovieDetailsItem/MovieDetailsItem';
 
 export const MovieDetails = ({ movieDetails }) => {
   return (
-    <div className={css.detailsContainer}>
-      <img
-        
-        src={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}
-        alt={movieDetails.title}
-        className={css.detailsImg}
-      />
-      <h3 className={css.detailsTitle}>
-        {movieDetails.title}({new Date(movieDetails.release_date).getFullYear()}
-        )
-      </h3>
-      <p className={css.detailsVote}>User vote: {movieDetails.vote_average}</p>
-      <p className={css.detailsOverview}>Overview</p>
-      <p className={css.detailsOverViewText}>{movieDetails.overview}</p>
-      <p className={css.detailsGenres}>Genres</p>
-      <p className={css.detailsGenresText}>{movieDetails.genres.map(genre => genre.name).join(', ')}</p>
+    <div>
+      <MovieDetailsItem movieDetails={movieDetails} />
+      <div className={css.addContainer}>
+        <p className={css.addText}>Additional information</p>
+        <Link to="cast" className={css.addLink}>Cast</Link>
+        <Link to="reviews" className={css.addLink}>Reviews</Link>
+          <Routes>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Routes>
+      </div>
     </div>
   );
 };

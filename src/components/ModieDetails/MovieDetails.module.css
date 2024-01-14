@@ -1,33 +1,70 @@
 .detailsContainer {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    margin-top: 20px;
-    margin-left: 20px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 300px;
 }
 .detailsImg {
-    grid-row: 1/7;
-    width: 100%;
-    height: 100%;
-    display: block;
+  grid-row: 1/7;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .detailsTitle {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 .detailsVote {
-
+  font-size: 20px;
+  margin-bottom: 10px;
 }
-.detailsOverview {
-
+.detailsOverview, .detailsGenres {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 5px;
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 .detailsOverViewText {
-
+    font-size: 20px;
 }
-.detailsGenres {
 
-}
 .detailsGenresText {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.detailsSpan {
+    font-weight: bold;
+}
+p, h3 {
+    margin-block-start: 0;
+    margin-inline-end: 0;
+}
 
+.addContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addText {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.addLink {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 150px;
+    color: rgb(23, 91, 42);
+    text-decoration: none;
+}
+.addLink:hover {
+    color: aqua;
+}
+.routesContainer {
+    margin-top: 30px;
+    margin-left: 20px;
 }

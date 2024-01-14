@@ -1,0 +1,20 @@
+.castContainer {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.castItem {
+  list-style-type: none;
+}
+.castImg {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.castText {
+  font-size: 20px;
+  text-align: center;
+}
+.castSpan {
+  font-weight: bold;
+}
