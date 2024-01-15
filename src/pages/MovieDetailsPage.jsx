@@ -12,7 +12,7 @@ const MovieDetailsPage = () => {
   const location = useLocation();
   const [movieDetails, setMovieDetails] = useState(null);
   const [status, setStatus] = useState(STATUSES.idle); // "idle" | "pending" | "success" | "error"
-  const backLinkRef = useRef(location.state?.from ?? `/movies${location.search}`);
+  const backLinkRef = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
