@@ -12,7 +12,9 @@ export const requestMovieDetailsById = async movieId => {
   const BASE_URL = 'https://api.themoviedb.org/3/movie/';
   const KEY = 'd425559355e0879fed139185dbbb845a';
 
-  const response = await axios.get(`${BASE_URL}${movieId}?api_key=${KEY}&language=en-US`);
+  const response = await axios.get(
+    `${BASE_URL}${movieId}?api_key=${KEY}&language=en-US`
+  );
   return response.data;
 };
 

@@ -1,11 +1,15 @@
-import React from 'react'
-import css from '../ModieDetails/MovieDetails.module.css'
+import React from 'react';
+import css from '../ModieDetails/MovieDetails.module.css';
 
-export const MovieDetailsItem = ({movieDetails}) => {
+export const MovieDetailsItem = ({ movieDetails }) => {
   return (
     <div className={css.detailsContainer}>
       <img
-        src={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}
+        src={
+          movieDetails.backdrop_path
+            ? `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`
+            : 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'
+        }
         alt={movieDetails.title}
         className={css.detailsImg}
       />
@@ -23,6 +27,6 @@ export const MovieDetailsItem = ({movieDetails}) => {
       <p className={css.detailsGenresText}>
         {movieDetails.genres.map(genre => genre.name).join(', ')}
       </p>
-      </div>
-  )
-}
+    </div>
+  );
+};

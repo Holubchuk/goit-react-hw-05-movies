@@ -18,3 +18,8 @@
 .castSpan {
   font-weight: bold;
 }
+.noCastMessage {
+  font-size: 24px;
+  margin-left: 40px;
+  color: brown;
+}

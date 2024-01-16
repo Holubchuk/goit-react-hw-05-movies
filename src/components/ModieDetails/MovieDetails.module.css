@@ -22,7 +22,8 @@
   margin-left: 20px;
   margin-top: 10px;
 }
-.detailsOverview, .detailsGenres {
+.detailsOverview,
+.detailsGenres {
   font-weight: bold;
   font-size: 24px;
   margin-left: 20px;
@@ -30,7 +31,7 @@
   margin-block-start: 10px;
 }
 .detailsOverViewText {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .detailsGenresText {
@@ -38,34 +39,35 @@
   font-size: 20px;
 }
 .detailsSpan {
-    font-weight: bold;
+  font-weight: bold;
 }
-p, h3 {
-    margin-block-start: 0;
-    margin-inline-end: 0;
+p,
+h3 {
+  margin-block-start: 0;
+  margin-inline-end: 0;
 }
 
 .addContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .addText {
-    font-size: 28px;
-    margin-top: 20px;
-    margin-left: 80px;
+  font-size: 28px;
+  margin-top: 20px;
+  margin-left: 80px;
 }
 .addLink {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 150px;
-    color: rgb(23, 91, 42);
-    text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 150px;
+  color: rgb(23, 91, 42);
+  text-decoration: none;
 }
 .addLink:hover {
-    color: aqua;
+  color: aqua;
 }
 .routesContainer {
-    margin-top: 30px;
-    margin-left: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
 }

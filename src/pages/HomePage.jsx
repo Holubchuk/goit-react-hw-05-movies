@@ -29,14 +29,16 @@ const HomePage = () => {
 
   return (
     <main>
-    {status === STATUSES.pending && <Loader />}
-    {status === STATUSES.success && (
-      <>
-        <p style={{ marginLeft: '100px', fontWeight: 700, fontSize: '48px' }}>Trending today</p>
-        <MoviesList trending={trending} />
-      </>
-    )}
-  </main>
+      {status === STATUSES.pending && <Loader />}
+      {status === STATUSES.success && (
+        <>
+          <p style={{ marginLeft: '100px', fontWeight: 700, fontSize: '48px' }}>
+            Trending today
+          </p>
+          <MoviesList trending={trending} />
+        </>
+      )}
+    </main>
   );
 };
 

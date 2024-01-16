@@ -12,12 +12,16 @@ export const MovieDetails = ({ movieDetails }) => {
       <MovieDetailsItem movieDetails={movieDetails} />
       <div className={css.addContainer}>
         <p className={css.addText}>Additional information</p>
-        <Link to="cast" className={css.addLink}>Cast</Link>
-        <Link to="reviews" className={css.addLink}>Reviews</Link>
-          <Routes>
-            <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<Reviews />} />
-          </Routes>
+        <Link to="cast" className={css.addLink}>
+          Cast
+        </Link>
+        <Link to="reviews" className={css.addLink}>
+          Reviews
+        </Link>
+        <Routes>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Routes>
       </div>
     </div>
   );
