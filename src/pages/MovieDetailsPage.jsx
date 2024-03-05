@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+import css from '../components/ModieDetails/MovieDetails.module.css'
 
 import { requestMovieDetailsById } from '..//services/api';
 import { STATUSES } from '../services/constants';
@@ -30,7 +31,7 @@ const MovieDetailsPage = () => {
   }, [movieId]);
   return (
     <div>
-      <Link to={backLinkRef.current}>Go back</Link>
+      <Link to={backLinkRef.current} className={css.goBackLink}>Go back</Link>
       {status === STATUSES.pending && <Loader />}
       {status === STATUSES.success && (
         <MovieDetails movieDetails={movieDetails} />
