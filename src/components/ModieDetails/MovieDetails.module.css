@@ -1,9 +1,9 @@
-/* .detailsContainer {
+.detailsContainer {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-column-gap: 1em;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 100px;
   margin-right: 300px;
 }
 .detailsImg {
@@ -32,6 +32,7 @@
 }
 .detailsOverViewText {
   font-size: 20px;
+  max-width: 800px;
 }
 
 .detailsGenresText {
@@ -40,84 +41,13 @@
 }
 .detailsSpan {
   font-weight: bold;
-} */
-.detailsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
 }
-
-.detailsImg {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.detailsTitle {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.detailsVote {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.detailsSpan {
-  font-weight: bold;
-}
-
-.detailsOverview,
-.detailsGenres {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.detailsOverViewText,
-.detailsGenresText {
-  font-size: 16px;
-  margin-bottom: 20px;
-  max-width: 300px;
-}
-
-
 
 p,
 h3 {
   margin-block-start: 0;
   margin-inline-end: 0;
 }
-
-/* .addContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.addText {
-  font-size: 28px;
-  margin-top: 20px;
-  margin-left: 80px;
-}
-.addLink {
-  font-size: 24px;
-  font-weight: bold;
-  margin-left: 150px;
-  color: rgb(23, 91, 42);
-  text-decoration: none;
-}
-.addLink:hover {
-  color: aqua;
-}
-.routesContainer {
-  margin-top: 30px;
-  margin-left: 20px;
-} */
-
 
 .addContainer {
   display: flex;
@@ -146,7 +76,6 @@ h3 {
 .addLink:hover {
   text-decoration: underline;
 }
-
 
 .goBackLink {
   display: inline-block;

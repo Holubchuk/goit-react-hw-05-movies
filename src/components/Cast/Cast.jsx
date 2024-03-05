@@ -34,8 +34,7 @@ export const Cast = () => {
       Array.isArray(moviesCast) &&
       moviesCast.length > 0
         ? moviesCast.map(movie => (
-            <ul key={movie.id} className={css.castList}>
-              <li className={css.castItem}>
+              <li className={css.castItem} key={movie.id}>
                 <img
                   src={
                     movie.profile_path
@@ -51,7 +50,6 @@ export const Cast = () => {
                   {movie.character}
                 </p>
               </li>
-            </ul>
           ))
         : status === STATUSES.success && (
             <p className={css.noCastMessage}>

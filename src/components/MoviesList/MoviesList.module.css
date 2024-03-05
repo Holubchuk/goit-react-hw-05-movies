@@ -1,12 +1,16 @@
 .movieListContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 10px;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
 }
 
 .trendingItem {
   list-style: none;
   font-size: 36px;
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  overflow: hidden;
 }
 
 .trendingLink {
@@ -19,7 +23,7 @@
 }
 
 .detailsImg {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -27,3 +31,4 @@
   text-align: center;
   margin-block-start: 0;
 }
+
