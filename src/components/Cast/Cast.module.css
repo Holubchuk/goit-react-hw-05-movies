@@ -10,8 +10,8 @@
 }
 .castImg {
   display: block;
-  width: 100%;
-  margin-bottom: 5px;
+  width: 80%;
+  margin: 0 auto 5px; 
 }
 .castText {
   font-size: 20px;
